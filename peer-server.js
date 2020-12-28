@@ -7,7 +7,7 @@ app.get("/", (req, res, next) => res.send("Hello world!"));
 
 // =======
 
-const server = app.listen(9000);
+const server = app.listen(process.env.PORT);
 
 const peerServer = ExpressPeerServer(server, {
   path: "/myapp"
